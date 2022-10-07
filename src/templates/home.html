@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Loan Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('train')}}"method="post">
+      <input type="text" name="Gender" placeholder="Gender" required="required" /><br>
+    	<input type="text" name="Married" placeholder="Married" required="required" /><br>
+        <input type="text" name="Dependents" placeholder="Dependents" required="required" /><br>
+        <input type="text" name="Education" placeholder="Education" required="required" /><br>
+        <input type="text" name="Self_Employed" placeholder="Self_Employed" required="required" /><br>
+        <input type="text" name="ApplicantIncome" placeholder="ApplicantIncome" required="required" /><br>
+        <input type="text" name="CoapplicantIncome" placeholder="CoapplicantIncome" required="required" /><br>
+        <input type="text" name="LoanAmount" placeholder="LoanAmount" required="required" /><br>
+        <input type="text" name="Credit_History" placeholder="Credit_History" required="required" /><br>
+        <input type="text" name="Property_Area" placeholder="Property_Area" required="required" /><br>
+        
+
+
+        <button type="predict" class="btn btn-primary btn-block btn-large">Predict</button>
+        <button type="train" class="btn btn-primary btn-block btn-large">Train</button>
+    </form>
+    <!--<script type="text/javascript">
+      function form_url(params) {
+        var url_for = "";
+        if (params == 'predict')
+          url_for = "predict";
+        if (params == 'train'){
+          url_for = "train";
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url_for);
+        xhr.setRequestHeader('Content-Type', 'application/train');
+        xhr.onreadystatechange = function(data){
+          console.log(data);
+        }
+      }
+    </script>-->
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>

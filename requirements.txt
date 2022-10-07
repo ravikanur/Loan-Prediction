@@ -1,0 +1,8 @@
+pandas
+numpy==1.19.2
+seaborn
+matplotlib
+sklearn
+gunicorn
+Flask
+-e .
