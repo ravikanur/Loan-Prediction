@@ -64,7 +64,7 @@ def predict():
 
 if __name__ == '__main__':
     loan_pred = Loan_prediction()
-    port = 5000
+    #port = 5000
     #app.run(host='0.0.0.0', port=port, debug=True)
     app.run(debug=True)
 
