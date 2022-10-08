@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
-import json
+#import json
 import joblib
+import os
 import seaborn as sns
 import matplotlib.pyplot as plt
 from flask import Flask, request, app, jsonify,url_for, render_template
@@ -66,7 +67,8 @@ if __name__ == '__main__':
     loan_pred = Loan_prediction()
     #port = 5000
     #app.run(host='0.0.0.0', port=port, debug=True)
-    app.run(debug=True)
+    port = int(os.environ.get('port', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
 
     
         
