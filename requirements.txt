@@ -6,4 +6,6 @@ sklearn
 gunicorn
 Flask
 gunicorn
+joblib
+
 -e .
